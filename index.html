@@ -12,21 +12,33 @@
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body class="min-h-screen flex items-center justify-center px-4 py-8">
-  <!-- <body class="w-full"> -->
-    <main class="w-full px-3 py-3">
-      <nav aria-label="Main navigation" class="sticky top-0 z-50 mx-auto mb-4 flex h-[80px] w-[calc(100%+24px)] max-w-[1392px] items-center justify-between rounded-[99px] border-b border-[#E0E0ED] bg-white px-4 py-3 shadow-sm sm:px-10 lg:px-[80px]">
+  <!-- Nav Bar + Hero Section -->
+       <main class="w-full px-3 py-3">
+      <nav aria-label="Main navigation" class="sticky top-0 z-50 mx-auto mb-[120px] flex h-[80px] w-[calc(100%+24px)] max-w-[1392px] items-center justify-between rounded-[99px] border-b border-[#E0E0ED] bg-white px-4 py-3 shadow-sm sm:px-10 lg:px-[80px]">
         <a href="#" class="flex h-10 w-[91.666664px] items-center justify-center" aria-label="Acme home">
           <img src="logo.png" alt="Acme" class="h-10 w-[91.666664px] object-contain">
         </a>
-        <div class="flex items-center gap-3 text-xs font-medium sm:gap-10 sm:text-[16px]">
+        <div class="hidden items-center gap-3 text-xs font-medium lg:flex lg:gap-10 lg:text-[16px]">
           <a href="#home" class="hover:text-[#5E44FF] hover:underline underline-offset-4">Home</a>
           <a href="#features" class="hover:text-[#5E44FF] hover:underline underline-offset-4">Features</a>
           <a href="#pricing" class="hover:text-[#5E44FF] hover:underline underline-offset-4">Pricing</a>
           <a href="#contact" class="hover:text-[#5E44FF] hover:underline underline-offset-4">Contact</a>
         </div>
+        <details class="group absolute inset-0 flex items-center justify-end pr-4 sm:pr-10 lg:hidden">
+          <summary aria-label="Toggle navigation menu" class="relative block h-6 w-6 cursor-pointer list-none ">
+            <img src="menu.png" alt="" aria-hidden="true" class="absolute left-[3px] top-[6px] h-[12px] w-[18px] object-contain group-open:hidden">
+            <img src="menu_hover.png" alt="" aria-hidden="true" class="absolute left-[3px] top-[6px] hidden h-[12px] w-[18px] object-contain group-open:block">
+          </summary>
+          <div class="absolute left-0 right-0 top-full z-50 mt-3 flex flex-col overflow-hidden rounded-[40px] border border-[#E0E0ED] bg-white py-1 text-[20px] font-medium shadow-lg">
+            <a href="#home" class="flex h-[80px] items-center justify-center px-4 hover:text-[#5E44FF] hover:underline decoration-[#5E44FF] underline-offset-4">Home</a>
+            <a href="#features" class="flex h-[80px] items-center justify-center px-4 hover:text-[#5E44FF] hover:underline decoration-[#5E44FF] underline-offset-4">Features</a>
+            <a href="#pricing" class="flex h-[80px] items-center justify-center px-4 hover:text-[#5E44FF] hover:underline decoration-[#5E44FF] underline-offset-4">Pricing</a>
+            <a href="#contact" class="flex h-[80px] items-center justify-center px-4 hover:text-[#5E44FF] hover:underline decoration-[#5E44FF] underline-offset-4">Contact</a>
+          </div>
+        </details>
       </nav>
 
-      <section aria-labelledby="hero-label" class="mb-4">
+      <section aria-labelledby="hero-label" class="mb-[120px]">
 
         <div class="w-full rounded-md bg-[#f7f7ff] px-4 pb-7 pt-3 text-[#191927] sm:px-6 sm:pb-7">
           <div id="home" class="flex min-h-[245px] flex-col items-center justify-center px-2 pt-8 text-center">
@@ -45,9 +57,13 @@
         </div>
       </section>
 
-  <div class="mx-auto flex w-full max-w-[1392px] flex-col justify-between p-8">
+
+
+  <!-- Feature Section -->
+
+  <div class="mx-auto mb-[140px] flex w-full max-w-[1392px] flex-col justify-between gap-8">
       <section
-        class="grid grid-cols-1 gap-4 md:grid-cols-3"
+        class="grid grid-cols-1 gap-4 sm:grid-cols-3"
         aria-label="Features"
       >
         <article class="feature-card feature-card--workflow">
@@ -122,10 +138,9 @@
         </article>
       </section>
   </div>
-    <!-- Container หน้าเว็บ -->
-    <!-- <div class="w-full p-8 flex flex-col justify-between shadow-2xl"> -->
-      <!-- <div class="bg-[#f8f9fc] w-full min-h-screen p-8 md:p-16 flex flex-col justify-between"> -->
-      
+
+
+    <!-- Contact Section & Footer -->
       <!-- การ์ดฟอร์มตรงกลาง -->
       <div class="my-auto mx-auto flex w-full max-w-[1392px] flex-col justify-between rounded-[24px] bg-white p-8 shadow-sm md:p-12">
         <div class="mx-auto w-full max-w-[640px]">
